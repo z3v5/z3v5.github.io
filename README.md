@@ -1,8 +1,8 @@
 # My previous posts
 
 ## 2022
-- [Nebula15](https://telegra.ph/Nebula---15-09-13)
-- [Nebula14](https://telegra.ph/Nebula---14-07-25)
+- [Nebula 15](https://telegra.ph/Nebula---15-09-13)
+- [Nebula 14](https://telegra.ph/Nebula---14-07-25)
 
 ## 2021
 - [Remote code execution via web shell upload](https://telegra.ph/Remote-code-execution-via-web-shell-upload-12-08)
@@ -12,21 +12,21 @@
 - [Reflected XSS into HTML context with nothing encoded](https://telegra.ph/Reflected-XSS-into-HTML-context-with-nothing-encoded-12-02)
 - [SQL injection vulnerability allowing login bypass](https://telegra.ph/SQL-injection-vulnerability-allowing-login-bypass-11-29)
 - [SQL injection vulnerability in WHERE clause allowing retrieval of hidden data](https://telegra.ph/SQL-injection-vulnerability-in-WHERE-clause-allowing-retrieval-of-hidden-data-11-25)
-- [Nebula12](https://telegra.ph/Nebula---12-11-24)
+- [Nebula 12](https://telegra.ph/Nebula---12-11-24)
 - [Authentication bypass via OAuth implicit flow](https://telegra.ph/Authentication-bypass-via-OAuth-implicit-flow-11-17)
 - [eWPT review](https://telegra.ph/eWPT-review-10-15)
-- [Nebula11](https://telegra.ph/Nebula---11-11-11)
-- [Nebula10](https://telegra.ph/Nebula---10-11-03)
-- [Nebula09](https://telegra.ph/Nebula-09-09-20)
-- [Nebula08](https://telegra.ph/Nebula-08-09-20)
-- [Nebula07](https://telegra.ph/Nebula---07-10-26)
-- [Nebula06](https://telegra.ph/Nebula---06-10-26)
-- [Nebula05](https://telegra.ph/Nebula---05-10-26)
-- [Nebula04](https://telegra.ph/Nebula---05-10-26)
-- [Nebula03](https://telegra.ph/Nebula---03-10-22)
-- [Nebula02](https://telegra.ph/Nebula---02-10-22)
-- [Nebula01](https://telegra.ph/Nebula---01-10-22)
-- [Nebula00](https://telegra.ph/Nebula---00-10-22)
+- [Nebula 11](https://telegra.ph/Nebula---11-11-11)
+- [Nebula 10](https://telegra.ph/Nebula---10-11-03)
+- [Nebula 09](https://telegra.ph/Nebula-09-09-20)
+- [Nebula 08](https://telegra.ph/Nebula-08-09-20)
+- [Nebula 07](https://telegra.ph/Nebula---07-10-26)
+- [Nebula 06](https://telegra.ph/Nebula---06-10-26)
+- [Nebula 05](https://telegra.ph/Nebula---05-10-26)
+- [Nebula 04](https://telegra.ph/Nebula---05-10-26)
+- [Nebula 03](https://telegra.ph/Nebula---03-10-22)
+- [Nebula 02](https://telegra.ph/Nebula---02-10-22)
+- [Nebula 01](https://telegra.ph/Nebula---01-10-22)
+- [Nebula 00](https://telegra.ph/Nebula---00-10-22)
 
 ## 2020
 - [OSCP review](https://telegra.ph/OSCP-review-09-27)
