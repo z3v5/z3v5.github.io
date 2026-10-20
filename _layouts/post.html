@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://unpkg.com; img-src 'self' data:; font-src 'self' https://unpkg.com; object-src 'none'; base-uri 'self'; form-action 'none'" />
+  <title>{{ page.title }} - Notepad</title>
+  <link rel="stylesheet" href="https://unpkg.com/98.css@0.1.21/dist/98.css" integrity="sha384-15ft94Qa+wtquckGuqoUZVwmRnPrMFakV20jxURH5clORpGUeXAbhNK5x6aVebrD" crossorigin="anonymous" />
+  <link rel="stylesheet" href="{{ '/assets/css/desktop.css' | relative_url }}" />
+</head>
+<body class="standalone-desktop">
+  <div class="desktop">
+    <div class="window notepad-window standalone-window">
+      <div class="title-bar">
+        <div class="title-bar-text">{{ page.title }}.txt - Notepad</div>
+        <div class="title-bar-controls">
+          <button aria-label="Close" id="standalone-close" data-home-url="{{ '/' | relative_url }}"></button>
+        </div>
+      </div>
+      <div class="notepad-menubar">File&nbsp;&nbsp;Edit&nbsp;&nbsp;Search&nbsp;&nbsp;Help</div>
+      <div class="window-body notepad-body">
+        {{ content }}
+      </div>
+    </div>
+  </div>
+  <script src="{{ '/assets/js/standalone-close.js' | relative_url }}"></script>
+</body>
+</html>

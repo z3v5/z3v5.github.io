@@ -1,0 +1,362 @@
+html, body {
+  margin: 0;
+  height: 100%;
+}
+
+body {
+  background: #008080;
+  font-family: "Pixelated MS Sans Serif", Arial, sans-serif;
+}
+
+.desktop {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  box-sizing: border-box;
+  padding: 16px;
+  padding-bottom: 48px;
+  overflow: hidden;
+}
+
+/* Desktop icons */
+.desktop-icon {
+  width: 84px;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+  color: #fff;
+}
+.desktop-icon-glyph {
+  font-size: 40px;
+  line-height: 1;
+}
+.desktop-icon-label {
+  margin-top: 4px;
+  font-size: 12px;
+  text-shadow: 1px 1px 1px #000;
+}
+
+/* Windows */
+#windows-layer {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+#windows-layer .window {
+  pointer-events: auto;
+}
+
+.window {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+}
+
+.explorer-window {
+  width: 620px;
+  max-height: 70vh;
+}
+.notepad-window {
+  width: 560px;
+  max-height: 65vh;
+}
+
+.window.maximized {
+  left: 0 !important;
+  top: 0 !important;
+  width: 100% !important;
+  height: calc(100vh - 32px) !important;
+  max-height: none !important;
+}
+
+.window.minimized {
+  display: none;
+}
+
+.window .title-bar {
+  cursor: move;
+}
+.window.maximized .title-bar {
+  cursor: default;
+}
+
+.window-body.scrollable {
+  overflow: auto;
+  flex: 1;
+}
+
+/* Menu bar (shared by Explorer and Notepad windows) */
+.menu-bar {
+  background: silver;
+  border-bottom: 1px solid #808080;
+  padding: 2px 6px;
+  font-size: 12px;
+  flex-shrink: 0;
+}
+
+/* Explorer toolbar + address bar */
+.toolbar {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 3px 6px;
+  border-bottom: 1px solid #808080;
+  flex-shrink: 0;
+}
+.toolbar-buttons {
+  display: flex;
+  gap: 2px;
+}
+.toolbar-buttons button {
+  min-width: 0;
+  height: 22px;
+  padding: 0 6px;
+  font-size: 11px;
+}
+.address-bar {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 12px;
+}
+.address-value {
+  flex: 1;
+  background: #fff;
+  box-shadow: inset -1px -1px #fff, inset 1px 1px grey, inset -2px -2px #dfdfdf, inset 2px 2px #0a0a0a;
+  padding: 2px 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.address-text {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Explorer two-pane body */
+.explorer-body {
+  display: flex;
+  flex: 1;
+  min-height: 0;
+}
+.explorer-tree {
+  width: 170px;
+  flex-shrink: 0;
+  margin: 4px 0 4px 4px;
+  overflow: auto;
+}
+.explorer-tree li {
+  cursor: default;
+}
+.explorer-tree .tree-selected > a {
+  background-color: navy;
+  color: #fff;
+}
+.explorer-list-pane {
+  flex: 1;
+  overflow: auto;
+  margin: 4px;
+  border: 1px solid #808080;
+}
+.file-table {
+  width: 100%;
+  table-layout: fixed;
+}
+.file-table th:nth-child(1), .file-table td:nth-child(1) { width: 55%; }
+.file-table th:nth-child(2), .file-table td:nth-child(2) { width: 25%; }
+.file-table th:nth-child(3), .file-table td:nth-child(3) { width: 20%; }
+.file-table td {
+  cursor: default;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.file-table .cell-name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 0;
+}
+.file-table .cell-title {
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.explorer-window .status-bar {
+  margin: 0 2px 2px;
+  flex-shrink: 0;
+}
+
+.notepad-body {
+  background: #fff;
+  color: #000;
+  font-family: "Courier New", monospace;
+  font-size: 13px;
+  line-height: 1.5;
+  padding: 10px;
+  overflow: auto;
+}
+.notepad-body img {
+  max-width: 100%;
+}
+.notepad-body h1,
+.notepad-body h2,
+.notepad-body h3,
+.notepad-body h4 {
+  font-family: inherit;
+  margin: 0.6em 0 0.3em;
+  line-height: 1.3;
+}
+.notepad-body h1 { font-size: 20px; }
+.notepad-body h2 { font-size: 17px; }
+.notepad-body h3 { font-size: 15px; }
+.notepad-body h4 { font-size: 13px; }
+.notepad-body p {
+  margin: 0.6em 0;
+}
+.notepad-body pre {
+  white-space: pre-wrap;
+  background: #f0f0f0;
+  padding: 6px;
+  overflow-x: auto;
+}
+.notepad-body blockquote {
+  margin: 8px 0;
+  padding-left: 10px;
+  border-left: 3px solid #808080;
+  color: #333;
+}
+
+/* Taskbar */
+.taskbar {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 32px;
+  background: silver;
+  border-top: 2px solid #fff;
+  display: flex;
+  align-items: center;
+  padding: 2px 4px;
+  gap: 4px;
+  z-index: 10000;
+}
+.taskbar-start {
+  font-weight: bold;
+}
+.taskbar-items {
+  flex: 1;
+  display: flex;
+  gap: 4px;
+  overflow-x: auto;
+  height: 100%;
+  align-items: center;
+}
+.taskbar-item {
+  max-width: 160px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 12px;
+  height: 24px;
+}
+.taskbar-clock {
+  padding: 2px 8px;
+  border: 1px inset #808080;
+  font-size: 12px;
+  background: silver;
+}
+
+/* Start menu */
+.start-menu {
+  position: fixed;
+  left: 2px;
+  bottom: 34px;
+  background: silver;
+  border: 2px outset #fff;
+  min-width: 220px;
+  z-index: 10001;
+}
+.start-menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 4px 0;
+}
+.start-menu li {
+  padding: 6px 12px;
+  cursor: default;
+}
+.start-menu li:hover {
+  background: #000080;
+  color: #fff;
+}
+.start-menu a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+}
+
+/* Standalone single-post page (direct link visits) */
+.standalone-desktop .desktop {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+.standalone-window {
+  position: static;
+  width: min(700px, 92vw);
+  max-height: 85vh;
+}
+
+/* Mobile: fixed-width draggable windows don't fit small screens, so pin them
+   full-width near the top instead (overrides JS-set inline left/top/width). */
+@media (max-width: 700px) {
+  .desktop {
+    padding: 8px;
+    padding-bottom: 40px;
+  }
+  .window {
+    left: 6px !important;
+    top: 40px !important;
+    width: calc(100vw - 12px) !important;
+    max-height: calc(100vh - 88px) !important;
+  }
+  .window.maximized {
+    top: 0 !important;
+    height: calc(100vh - 32px) !important;
+  }
+  .title-bar-controls {
+    gap: 6px;
+    padding-right: 2px;
+  }
+  .title-bar-controls button {
+    /* enlarge the whole button incl. its background-position-based icon so nothing shifts */
+    transform: scale(1.4);
+    transform-origin: center;
+  }
+  .menu-bar {
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  .toolbar {
+    flex-wrap: wrap;
+  }
+  .explorer-body {
+    flex-direction: column;
+  }
+  .explorer-tree {
+    width: 100%;
+    max-height: 100px;
+    margin: 4px;
+  }
+  .file-table th:nth-child(3),
+  .file-table td:nth-child(3) {
+    display: none;
+  }
+  .file-table th:nth-child(1), .file-table td:nth-child(1) { width: 65%; }
+  .file-table th:nth-child(2), .file-table td:nth-child(2) { width: 35%; }
+}
